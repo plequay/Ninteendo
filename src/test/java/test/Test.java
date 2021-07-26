@@ -1,11 +1,12 @@
 package test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-
-import metier.Client;
+import metier.Achat;
 import metier.Boutique;
+import metier.Client;
 import metier.Console;
 import metier.Jeu;
 
@@ -13,7 +14,6 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		
 		
 		
@@ -31,11 +31,23 @@ public class Test {
 		jeux.add(j2);
 		jeux.add(j5);
 		jeux.add(j1);
-		Client pika = new Client("Pika","Chu", jeux);
-
+		
+		
 		List <String> jeu = new ArrayList ();
 		jeu.add("Super");jeu.add("mega");jeu.add("jeu");jeu.add("de la");jeu.add("mort");
 		Boutique online = new Boutique ("Truc","201 rue du Bidule",jeu );
+		
+		Boutique b1 = new Boutique("De la merde", "en barre", jeu);
+		
+		
+		Achat a1 = new Achat(j1, LocalDate.now(), 1000, b1);
+		List<Achat> listAchats = new ArrayList<Achat>();
+		listAchats.add(a1);
+		
+		
+		Client pika = new Client("Pika","Chu", listAchats);
+
+		
 
 	}
 

@@ -6,40 +6,45 @@ public class Client {
 
 	private String nom;
 	private String prenom;
-	private List jeu;
+	private List<Achat> achat;
 	
 	
-	public Client(String nom, String prenom, List jeu) {
+	public Client(String nom, String prenom, List<Achat> achat) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
-		this.jeu = jeu;
+		this.achat = achat;
 	}
 	
 	
 	public String getNom() {
 		return nom;
 	}
+	
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+	
 	public String getPrenom() {
 		return prenom;
 	}
+	
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public List getJeu() {
-		return jeu;
+	
+	public List<Achat> getAchat() {
+		return this.achat;
 	}
-	public void setJeu(List jeu) {
-		this.jeu = jeu;
+	
+	public void setAchat(List<Achat> achat) {
+		this.achat = achat;
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Client [nom=" + nom + ", prenom=" + prenom + ", jeu=" + jeu + "]";
+		return "Client [nom=" + nom + ", prenom=" + prenom + ", achat=" + achat + "]";
 	}
 	
 	
