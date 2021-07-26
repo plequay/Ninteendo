@@ -1,5 +1,9 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import metier.Client;
 import metier.Console;
 import metier.Jeu;
 
@@ -18,7 +22,11 @@ public class Test {
 		Jeu j4 = new Jeu("Lol",Ordi);
 		Jeu j5 = new Jeu("Pokemon",Ordi);
 
-
+		List<Jeu> jeux = new ArrayList<Jeu>();
+		jeux.add(j2);
+		jeux.add(j5);
+		jeux.add(j1);
+		Client pika = new Client("Pika","Chu", jeux);
 	}
 
 }
