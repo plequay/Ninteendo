@@ -5,7 +5,7 @@ import java.util.List;
 public class Jeu {
 
 	private String titre;
-	private Console console;
+	private List<Console> console;
 	
 	
 	
