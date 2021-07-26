@@ -8,7 +8,10 @@ import metier.Achat;
 import metier.Boutique;
 import metier.Client;
 import metier.Console;
+import metier.Hybride;
 import metier.Jeu;
+import metier.Portable;
+import metier.*;
 
 public class Test {
 
@@ -17,15 +20,17 @@ public class Test {
 		
 		
 		
-		Console GameCube = new Console("GameCube");
-		Console Play4 = new Console("Play4");
-		Console Ordi = new Console("Ordi");
+		Console GameCube = new Hybride("GameCube", LocalDate.now(), 500);
+		Console Play4 = new Salon("Play4",LocalDate.now(), 1000 );
+		Console Ordi = new Portable("Ordi",LocalDate.now(), 700);
 		
-		Jeu j1 = new Jeu("Sonnic",GameCube);
-		Jeu j2 = new Jeu("SmashBrawl",GameCube);
-		Jeu j3 = new Jeu("SmashBrawl",GameCube);
-		Jeu j4 = new Jeu("Lol",Ordi);
-		Jeu j5 = new Jeu("Pokemon",Ordi);
+		List<Console> lc= new ArrayList();
+		
+		Jeu j1 = new Jeu("Sonnic",lc);
+		Jeu j2 = new Jeu("SmashBrawl",lc);
+		Jeu j3 = new Jeu("SmashBrawl",lc);
+		Jeu j4 = new Jeu("Lol",lc);
+		Jeu j5 = new Jeu("Pokemon",lc);
 
 		List<Jeu> jeux = new ArrayList<Jeu>();
 		jeux.add(j2);
